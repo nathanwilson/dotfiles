@@ -34,6 +34,13 @@ filetype plugin indent on    " required
 
 syntax on
 set relativenumber
+set undofile
+
+let mapleader = ","
+
+"save all swap files in a single location
+set backupdir=~/.vim/backup/
+set directory=~/.vim/backup/
 
 "long line handling
 set wrap
@@ -44,13 +51,6 @@ set colorcolumn=85
 "normal mode: no use of arrows, to force hjkl; left/right indent
 nmap <left> <<
 nmap <right> >>
-
-"use up/down arrows to move line/selection up down in normal/visual
-" mode
-nmap <Up> [e
-nmap <Down> ]e
-vmap <Up> [egv
-vmap <Down> ]egv
 
 "insert mode: no use of arrows, to force normal mode switch
 inoremap <up> <nop>
